@@ -11,7 +11,7 @@ const SmartPlugControl: React.FC<SmartPlugControlProps> = () => {
   const togglePlug = async () => {
     const action = isPlugOn ? "off" : "on";
     try {
-      await axios.post(`/plug/${action}`);
+      await axios.post(`http://localhost:3000/plug/${action}`);
       setIsPlugOn(!isPlugOn);
       setError(null);
     } catch (error) {
